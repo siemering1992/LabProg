@@ -11,7 +11,7 @@ private:
 public:
 
 	void drucke();
-	void umfang();
+	float umfang();
 	void verschiebe(int,int);
 	void set(int, int, int);
 

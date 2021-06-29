@@ -131,7 +131,7 @@ void setPos(Rechteck* r, int x, int y, int b, int h)
 	setXY(&r->p3, x + b, y);
 }
 
-// umrechnung
+// Setzen von x,y -> r,yphi
 
 void setXY(Punkt* p, int x, int y)
 {
@@ -139,6 +139,7 @@ void setXY(Punkt* p, int x, int y)
 	p->phi = atan2(y, x);
 }
 
+// Abrufen der x,y Variable von einem Punkt
 void getXY(Punkt* p, int* x, int* y)
 {
 	*x = round(p->r * cos(p->phi));

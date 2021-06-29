@@ -5,31 +5,31 @@ using namespace std;
 // Hauptprogramm
 void main()
 {
-	// erstelle eine Variable vom Verbundtyp Kreis
+	// Erstelle eine Variable vom Verbundtyp Kreis
 	Kreis k;
 
-	//erstelle eine Variable vom Verbundtyp Rechteck
+	//Erstelle eine Variable vom Verbundtyp Rechteck
 	Rechteck r;
 
-	//erstelle eine Variable vom Verbundtyp Dreieck
+	//Erstelle eine Variable vom Verbundtyp Dreieck
 	Dreieck d;
 
-	// setze Werte Kreises
+	//Setze Werte Kreises
 	setXY(&k.mitte, 0, 0);
 	k.radius = 10;
 
-	// setzte Werte des Rechtecks
+	//Setze Werte des Rechtecks
 	setXY(&r.p1, 0, 10);
 	setXY(&r.p2, 10, 10);
 	setXY(&r.p3, 10, 0);
 	setXY(&r.p4, 0, 0);
 
-	// setze Werte Dreieck
+	//Setze Werte Dreieck
 	setXY(&d.p1, 1, 1);
 	setXY(&d.p2, 4, 2);
 	setXY(&d.p3, 3, 5);
 
-	// Berechne Umfang
+	//Berechne Umfang
 	umfang(k);
 	umfang(r);
 	umfang(d);

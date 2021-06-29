@@ -10,11 +10,13 @@ Rechteck::Rechteck()
 	_punkt = new Punkt[4];
 };
 
+//Setzen des Rechtecks (x,y,breite,höhe)
 Rechteck::Rechteck(int x, int y, int b, int h) 
 {
 	_punkt = new Punkt[4];
 	set(x, y, b, h);
 }
+
 Rechteck::~Rechteck()
 {
 	delete[] _punkt;
@@ -32,6 +34,7 @@ void Rechteck::set(int x, int y, int b, int h)
 
 void Rechteck::drucke()
 {
+	cout << "---->Reechteck<---- " << endl;
 	int px, py;
 	for (int i = 0; i < 4; i++) {
 
@@ -52,7 +55,6 @@ void Rechteck::verschiebe(int dx, int dy)
 
 float Rechteck::umfang()
 {
-
 	int p1x, p1y, p3x, p3y, b, h;
 	_punkt[0].getXY(&p1x, &p1y); // Punkt unten-links
 	_punkt[2].getXY(&p3x, &p3y); // Punkt oben-rechts
@@ -60,14 +62,17 @@ float Rechteck::umfang()
 	h = abs(p1y - p3y);
 	return (2 * b) + (2 * h);
 
-	/*int pxy[4][2], b, h;
-//fokrku (int i = 0; i < 4; i++)
-{
+/* Berechnung des Umfangs mit einem Array
+* 
+	int pxy[4][2], b, h;
+	(int i = 0; i < 4; i++)
+	{
 	Punkt (tp) = *(_punkt + i);
 	tp.getXY(&(pxy[i][0]),&(pxy[i][1]));
-}
-b = abs(pxy[1][0] - pxy[3][0]);
-h = abs(pxy[1][1] - pxy[3][1]);
+	}
+
+	b = abs(pxy[1][0] - pxy[3][0]);
+	h = abs(pxy[1][1] - pxy[3][1]);
 */
 }
 
