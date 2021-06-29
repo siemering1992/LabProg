@@ -2,7 +2,6 @@
 #include "geometrien.h";
 using namespace std;
 
-
 // Hauptprogramm
 void main()
 {
@@ -15,13 +14,11 @@ void main()
 	//erstelle eine Variable vom Verbundtyp Dreieck
 	Dreieck d;
 
-
 	// setze Werte Kreises
 	setXY(&k.mitte, 0, 0);
 	k.radius = 10;
 
 	// setzte Werte des Rechtecks
-
 	setXY(&r.p1, 0, 10);
 	setXY(&r.p2, 10, 10);
 	setXY(&r.p3, 10, 0);
@@ -63,5 +60,4 @@ void main()
 	verschiebe(&d, 5, 5);
 	drucke(d);
 	cout << "Umfang: " << umfang(d) << endl;
-
 }

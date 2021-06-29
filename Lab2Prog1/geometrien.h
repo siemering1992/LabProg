@@ -12,8 +12,8 @@ struct Kreis
 {
 	Punkt mitte;
 	int radius;
-
 };
+
 struct Rechteck
 {
 	Punkt p1;

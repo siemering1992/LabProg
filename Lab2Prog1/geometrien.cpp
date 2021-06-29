@@ -2,7 +2,6 @@
 #include <iostream>
 #include <cmath>
 #include "geometrien.h"
-#include "math.h"
 using namespace std;
 
 
@@ -12,7 +11,6 @@ void drucke(Punkt* p)
 	int x, y;
 	getXY(p, &x, &y);
 	cout << "X: " << x << " Y: " << y <<endl;
-	
 }
 
 // Drucke Kreis
@@ -44,13 +42,13 @@ void drucke(Dreieck d)
 
 
 
-// berechne Umfang Kreis
+// Berechne Umfang Kreis
 float umfang(Kreis k)
 {
 	return M_PI * 2 * k.radius;
 }
 
-// berechne Umfang Rechteck
+// Berechne Umfang Rechteck
 float umfang(Rechteck r)
 {
 	int p1x, p1y,p3x, p3y;
@@ -64,7 +62,7 @@ float umfang(Rechteck r)
 	return (2 * b) + (2 * h); 
 }
 
-// berechne Umfang Dreieck
+// Berechne Umfang Dreieck
 float umfang(Dreieck d)
 {
 	int p1x, p1y, p2x, p2y, p3x, p3y;
