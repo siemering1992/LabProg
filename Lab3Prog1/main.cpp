@@ -25,5 +25,8 @@ void main()
 	kreis1.verschiebe(3, 2);
 	kreis1.drucke();
 	cout << "Umfang: " << kreis1.umfang() << endl;
+	kreis1.set(5, 5, 17);
+	kreis1.drucke();
+	cout << "Umfang: " << kreis1.umfang() << endl;
 	
 }

@@ -3,7 +3,7 @@
 using namespace std;
 
 
-
+//Default Konstruktor vom Rechteck
 Rechteck::Rechteck() 
 {
 	// Punkt Reihenfolge: unten-links, oben-links, oben-rechts, unten-rechts
@@ -16,14 +16,14 @@ Rechteck::Rechteck(int x, int y, int b, int h)
 	_punkt = new Punkt[4];
 	set(x, y, b, h);
 }
-
+//Destruktor vom Rechteck
 Rechteck::~Rechteck()
 {
 	delete[] _punkt;
 }
 
 
-
+//Setze Koordinaten vom Rechteck
 void Rechteck::set(int x, int y, int b, int h)
 {
 	_punkt[0] = { x, y };
@@ -32,9 +32,10 @@ void Rechteck::set(int x, int y, int b, int h)
 	_punkt[3] = { x+b, y };
 }
 
+//Drucke das Rechteck
 void Rechteck::drucke()
 {
-	cout << "---->Reechteck<---- " << endl;
+	cout << "---->Rechteck<---- " << endl;
 	int px, py;
 	for (int i = 0; i < 4; i++) {
 
@@ -45,6 +46,7 @@ void Rechteck::drucke()
 	}
 }
 
+//Verschiebe das Rechteck um dx,dy 
 void Rechteck::verschiebe(int dx, int dy)
 {
 	for (int i = 0; i < 4; i++) 
@@ -53,6 +55,7 @@ void Rechteck::verschiebe(int dx, int dy)
 	}
 }
 
+//Berechne den Umfang vom Rechteck
 float Rechteck::umfang()
 {
 	int p1x, p1y, p3x, p3y, b, h;
@@ -62,7 +65,7 @@ float Rechteck::umfang()
 	h = abs(p1y - p3y);
 	return (2 * b) + (2 * h);
 
-/* Berechnung des Umfangs mit einem Array
+/* Bereche den Umfang mit einem Array
 * 
 	int pxy[4][2], b, h;
 	(int i = 0; i < 4; i++)
