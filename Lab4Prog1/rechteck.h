@@ -1,8 +1,9 @@
 #pragma once
 #include "punkt.h"
-class Rechteck
+#include "geometrie.h"
+class Rechteck:public Geometrie
 {
-private:
+protected:
 	Punkt* _punkt;
 
 public:

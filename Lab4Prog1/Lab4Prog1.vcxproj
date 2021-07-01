@@ -139,14 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="halbkreis.cpp" />
     <ClCompile Include="kreis.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="punkt.cpp" />
+    <ClCompile Include="quadrat.cpp" />
     <ClCompile Include="rechteck.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="geometrie.h" />
+    <ClInclude Include="halbkreis.h" />
     <ClInclude Include="kreis.h" />
     <ClInclude Include="punkt.h" />
+    <ClInclude Include="quadrat.h" />
     <ClInclude Include="rechteck.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

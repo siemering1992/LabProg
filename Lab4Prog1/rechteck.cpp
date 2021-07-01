@@ -66,7 +66,7 @@ float Rechteck::umfang()
 	h = abs(p1y - p3y);
 	return (2 * b) + (2 * h);
 
-/* Bereche den Umfang mit einem Array
+/* Berechne den Umfang mit einem Array
 * 
 	int pxy[4][2], b, h;
 	(int i = 0; i < 4; i++)

@@ -1,17 +1,17 @@
 #pragma once
 #include <iostream>
+#include "geometrie.h"
 #include "punkt.h"
-class Kreis
+
+class Kreis: public Geometrie
 {
-private:
+protected :
 	Punkt _mitte;
 	int _radius;
-
-
 public:
 
-	void drucke();
-	float umfang();
+	virtual void drucke();
+	virtual float umfang();
 	void verschiebe(int,int);
 	void set(int, int, int);
 

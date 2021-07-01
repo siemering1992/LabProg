@@ -27,6 +27,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="halbkreis.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="quadrat.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kreis.h">
@@ -36,6 +42,15 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="rechteck.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="geometrie.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="halbkreis.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="quadrat.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
