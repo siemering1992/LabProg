@@ -4,12 +4,12 @@
 using namespace std;
 
 //Berechne den Umfang des Halbkreises
-
 float Halbkreis::umfang()
 {
 	return ((M_PI * _radius)+(2.0 * _radius));
 }
 
+// Drucke Halbkreis
 void Halbkreis::drucke()
 {
 	int pmx, pmy;

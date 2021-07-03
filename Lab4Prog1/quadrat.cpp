@@ -10,7 +10,6 @@ Quadrat::Quadrat(int x, int y, int b) : Rechteck(x, y, b, b) {};
 
 void Quadrat::drucke()
 {
-
 	cout << "---->Quadrat<---- " << endl;
 	int px, py;
 	for (int i = 0; i < 4; i++) {
@@ -25,11 +24,11 @@ void Quadrat::drucke()
 void Quadrat::set(int x, int y, int b, int h)
 {
 	if (b != h) {
-		//Fehler
+		cout << "Breite und Höhe sind nicht gleich!" << endl;
 	}
 	Rechteck::set(x, y, b, b);
 }
-
+//Setzen des Rechtecks (x,y,breite)
 void Quadrat::set(int x, int y, int b)
 {
 	Rechteck::set(x, y, b, b);
