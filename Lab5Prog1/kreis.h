@@ -3,6 +3,9 @@
 #include "geometrie.h"
 #include "punkt.h"
 using namespace std;
+#define ERRORCODE -1
+#define OKCODE 0
+
 
 //Definition der Klasse Kreis abgeleitet von "Geometrie"
 class Kreis: public Geometrie
@@ -12,6 +15,7 @@ protected :
 	Punkt _mitte;
 	int _radius;
 
+
 	//Öffentliche Methoden
 public:
 	
@@ -19,6 +23,8 @@ public:
 	virtual float umfang();
 	void verschiebe(int,int);
 	void set(int, int, int);
+
+
 
 	//Konstruktoren
 	Kreis();

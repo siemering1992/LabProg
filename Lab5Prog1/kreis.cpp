@@ -2,20 +2,22 @@
 #include "Kreis.h"
 #include <iostream>
 using namespace std;
-// Default Konstruktor Kreis
+
+/*
+Default Kostruktor mit initialen werten
+*/
 Kreis::Kreis()
 {
 	Punkt _mitte;
 	_radius = 0;
 }
 
-// Konstruktor Kreis
 /*
 Kostruktor mit initialen werten.
 
-@param x horizontal value within coordinate system
-@param y horizontal value within coordinate system
-@param r Radius des zu erstellenden Kreises
+@param x Horizontaler Wert 
+@param y Vertikaler Wert
+@param r Radius des Kreises
 @return Kreis Objekt
 */
 Kreis::Kreis(int x, int y, int r)
@@ -28,18 +30,27 @@ Kreis::Kreis(int x, int y, int r)
 /*
 Setze Werte des Kreises.
 
-@param x horizontal value within coordinate system
-@param y horizontal value within coordinate system
-@param r Radius des zu erstellenden Kreises
-@return void
+@param x Horizontaler Wert 
+@param y Vertikaler Wert
+@param r Radius des Kreises
 */
 void Kreis::set(int x, int y, int r)
 {
+	// Guard clause/ Waechtercode
+	if (r < 0) 
+	{
+		throw invalid_argument("Radius muss positiv sein!");
+	}
+
 	_mitte = { x, y };
 	_radius = r;
+
 }
 
-// Drucke Kreis
+/*
+Gebe  Werte des Kreises in der Konsole aus.
+Geometriename,x,y,Radius
+*/
 void Kreis::drucke()
 {
 	int pmx, pmy;
@@ -49,14 +60,21 @@ void Kreis::drucke()
 	cout << "Radius:" << _radius << endl;
 }
 
-// Verschiebe den Kreis
+/*
+Verschiebe x,y des Kreises.
+
+@param dx Horizontaler Verschiebewert
+@param dy Vertikaler Verschiebewert
+*/
 void Kreis::verschiebe(int dx, int dy)
 {
 	cout << "Verschiebe um x: "<< dx << " y: " << dy <<endl;
 	_mitte.verschiebe(dx, dy);
 }
 
-//Berechne den Umfang des Kreises
+/*
+Berechne den Umfang des Kreises.
+*/
 float Kreis::umfang()
 {
 	return M_PI * 2 * _radius;

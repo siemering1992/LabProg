@@ -20,7 +20,14 @@ float umfang(Kreis aCircle)
 	return M_PI * 2 * aCircle.radius;
 }
 
-// Verschiebe x und y 
+/*
+Verschiebe die x,y Werte.
+
+@param aCircle Kreiszeiger 
+@param dx Horizontaler Wert
+@param dy Vertikaler Wert
+
+*/
 void verschiebe(Kreis* aCircle, int dx, int dy)
 {
 	aCircle->mitte.x += dx;
